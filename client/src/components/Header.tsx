@@ -23,13 +23,13 @@ export default function Header() {
           <div className="hidden sm:ml-6 sm:flex sm:items-center">
             <div className="px-3 py-2 rounded-md text-sm font-medium">
               <Link href="/">
-                <a className={location === "/" ? "nav-link-active" : "nav-link"}>Home</a>
+                <span className={location === "/" ? "nav-link-active cursor-pointer" : "nav-link cursor-pointer"}>Home</span>
               </Link>
               <Link href="/documentation">
-                <a className={location === "/documentation" ? "nav-link-active" : "nav-link"}>Documentation</a>
+                <span className={location === "/documentation" ? "nav-link-active cursor-pointer" : "nav-link cursor-pointer"}>Documentation</span>
               </Link>
               <Link href="/api-reference">
-                <a className={location === "/api-reference" ? "nav-link-active" : "nav-link"}>API Reference</a>
+                <span className={location === "/api-reference" ? "nav-link-active cursor-pointer" : "nav-link cursor-pointer"}>API Reference</span>
               </Link>
             </div>
             <div className="ml-4 flex items-center">
@@ -58,17 +58,17 @@ export default function Header() {
       <div className={`sm:hidden ${mobileMenuOpen ? "" : "hidden"}`}>
         <div className="pt-2 pb-3 space-y-1">
           <Link href="/">
-            <a className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 bg-gray-50">Home</a>
+            <span className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 bg-gray-50 cursor-pointer">Home</span>
           </Link>
           <Link href="/documentation">
-            <a className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50">
+            <span className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50 cursor-pointer">
               Documentation
-            </a>
+            </span>
           </Link>
           <Link href="/api-reference">
-            <a className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50">
+            <span className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50 cursor-pointer">
               API Reference
-            </a>
+            </span>
           </Link>
         </div>
       </div>
