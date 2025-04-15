@@ -7,14 +7,17 @@ interface MainLayoutProps {
   children: ReactNode;
 }
 
+//{ children }: MainLayoutProps//{children}
+import "@/css/finance/MainLayout.css"
+
 export default function MainLayout({ children }: MainLayoutProps) {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="">
       <Header />
-      <div className="flex-grow flex flex-col md:flex-row">
+      <div className="">
         <Sidebar />
-        <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8">
-          {children}
+        <main className="main__container">
+        {children} 
         </main>
       </div>
       <Footer />

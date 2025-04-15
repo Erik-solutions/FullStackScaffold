@@ -1,31 +1,68 @@
+/* index.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  * {
-    @apply border-border;
-  }
 
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --color-primary:#9FB3DF;
+    --color-secondary:#BDDDE4;
+    --hover-color:#FAF1E6;
+    --shadow-color:#FFB8E0;
+
+  }
+  
+  [data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #f0f0f0;
+    --color-primary:#2E236C;
+    --color-secondary:#433D8B;
+    --hover-color:#7A1CAC;
+    --shadow-color:#402E7A;
+  }
+  
   body {
-    @apply font-sans antialiased bg-gray-50 text-foreground;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    font-family: sans-serif;
+    font-weight: 400;
+    transition: background-color 0.3s, color 0.3s;
   }
+
+  h1 { font-size: 3rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.625rem; }
+  h4 { font-size: 1.25rem; }
+  h5 { font-size: 1rem; }
+  h6, p, a { font-size: 1rem; }
+  
+  a {
+    color:var(--text-color);
+   
+  }
+
+ a:hover, button:hover{
+  color: var(--hover-color);
+  }
+
+button{
+  background: var(--color-primary);
 }
 
-@layer components {
-  .code-block {
-    @apply bg-gray-800 rounded-md p-4 text-white font-mono text-sm overflow-x-auto;
-  }
-  
-  .nav-link {
-    @apply text-gray-600 hover:text-primary mx-2;
-  }
-  
-  .nav-link-active {
-    @apply text-gray-900 hover:text-primary mx-2;
-  }
-  
-  .sidebar-link {
-    @apply block px-2 py-1 text-sm rounded hover:bg-gray-100;
-  }
+.icon{
+  stroke: var(--text-color);
 }
+
+.icon:hover{
+  stroke: var(--hover-color);
+  
+}
+
+.charts__container{
+  background: var(--hover-color);
+}
+
+

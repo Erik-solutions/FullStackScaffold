@@ -1,0 +1,30 @@
+.main__container{
+  margin-top: 2rem;
+    width: 82%;
+   
+    justify-self: right;
+    margin: 0 1rem;
+}
+
+nav{
+  margin-top: 2rem;
+  
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 16%;
+    height: 100%;
+   
+    margin: 0;
+}
+
+.nav__links{
+  
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.nav__links a {
+  text-decoration: none;
+}
