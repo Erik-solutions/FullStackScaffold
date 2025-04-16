@@ -28,7 +28,7 @@ const data: DataItem[] = [
 
 export default function MyCharts() {
   return (
-    <div className="w-full h-[400px] grid grid-cols-2 gap-4 mt-8 bg-green-500 charts__container rounded-lg">
+    <div className="w-full h-[400px] grid grid-cols-2 gap-4 mt-8  charts__container rounded-lg">
     
       <BarchartRender data={data} width={600} height={400} />
       <LineChartRender data={data} width={600} height={400} />

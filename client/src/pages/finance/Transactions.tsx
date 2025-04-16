@@ -1,4 +1,11 @@
+import TransactionRender from "@/components/ui/TransactionRender";
+
 export default function Transactions() {
-    return <h1>This is Transactions</h1>;
+    return (<>
+   
+    <TransactionRender/>
+    
+    </>)
+    
   }
   

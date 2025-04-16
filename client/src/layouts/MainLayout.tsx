@@ -16,7 +16,7 @@ export default function MainLayout({ children }: MainLayoutProps) {
       <Header />
       <div className="">
         <Sidebar />
-        <main className="main__container">
+        <main className="main__container ">
         {children} 
         </main>
       </div>
