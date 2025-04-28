@@ -13,6 +13,10 @@ import DayBooks from "@/pages/finance/DayBooksPage";
 
 import MainLayout from "@/layouts/MainLayout";
 import InvoicesPage from "@/pages/finance/InvoicesPage";
+import Signup from "./authentication/Signup"
+import Login from   "./authentication/Login"
+import React, { useState } from 'react';
+import { LandingPage } from "./layouts/LandingPage";
 
 function Router() {
   return (
@@ -30,15 +34,24 @@ function Router() {
   );
 }
 
-function App() {
+/*function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <MainLayout>
         <Router />
       </MainLayout>
     </QueryClientProvider>
-  );
-}
+  );*/
+ 
+     
+
+function App() {
+  return (
+
+    <LandingPage/>
+  )}
+
+
 
 export default App;
 

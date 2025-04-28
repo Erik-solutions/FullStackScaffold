@@ -3,11 +3,13 @@ import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 
 const app = express();
+// Middleware to parse incoming JSON and URL-encoded payloads
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+// Logging middleware to log API requests and responses
 app.use((req, res, next) => {
-  const start = Date.now();
+  const start = Date.now();  // Capture request start time
   const path = req.path;
   let capturedJsonResponse: Record<string, any> | undefined = undefined;
 
@@ -17,6 +19,7 @@ app.use((req, res, next) => {
     return originalResJson.apply(res, [bodyJson, ...args]);
   };
 
+  // After response is sent, log method, path, status, duration, and optionally response body
   res.on("finish", () => {
     const duration = Date.now() - start;
     if (path.startsWith("/api")) {
@@ -24,7 +27,7 @@ app.use((req, res, next) => {
       if (capturedJsonResponse) {
         logLine += ` :: ${JSON.stringify(capturedJsonResponse)}`;
       }
-
+// Truncate overly long logs to keep them tidy
       if (logLine.length > 80) {
         logLine = logLine.slice(0, 79) + "…";
       }
@@ -36,13 +39,16 @@ app.use((req, res, next) => {
   next();
 });
 
+// Register all routes (e.g., API endpoints)
 (async () => {
   const server = await registerRoutes(app);
 
+  // Global error handler
   app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
     const status = err.status || err.statusCode || 500;
     const message = err.message || "Internal Server Error";
 
+    // Send error response to client
     res.status(status).json({ message });
     throw err;
   });
@@ -62,8 +68,8 @@ app.use((req, res, next) => {
   const port = 5000;
   server.listen({
     port,
-    host: "0.0.0.0",
-    reusePort: true,
+    host: "0.0.0.0", // Accept connections from any network interface
+    reusePort: true, // Useful for clustering or restarting
   }, () => {
     log(`serving on port ${port}`);
   });

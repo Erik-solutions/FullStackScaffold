@@ -2,11 +2,6 @@ import {TrendingDown} from 'lucide-react';
 import { title } from 'process';
 
 
-
-
-
-
-
 export  type MetricItem = {
         title: string;
         indicator: 'positive' | 'negative';
