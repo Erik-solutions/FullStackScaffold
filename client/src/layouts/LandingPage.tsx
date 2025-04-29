@@ -1,5 +1,6 @@
 import { Building2, CirclePlus,LogIn } from "lucide-react"
 import { Businesses } from "@/components/ui/BusinessCardRender"
+import FavourateBusinesses from "@/components/ui/BusinessDirectory"
 
 export const  LandingPage: React.FC = () => {
     return(
@@ -33,7 +34,7 @@ export const  LandingPage: React.FC = () => {
            
 
 < Businesses/>
-
+<FavourateBusinesses/>
             
             
             </div>
