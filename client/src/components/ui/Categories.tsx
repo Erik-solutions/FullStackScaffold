@@ -22,19 +22,20 @@ export interface  BusinessRenderprops{
 
 export const BusinessRender:React.FC<BusinessRenderprops> = ({ businessDirectoryItems })=> {
     return (
-        <div className="business__container grid grid-cols-3 gap-4 py-4 ">
+        <div className="business__container grid grid-cols-3 gap-[3rem] py-2   ">
             {businessDirectoryItems.map((item, index) => (
-                <div key={index} className="  rounded bg-white flex flex-col  justify-center bg-red-400
-                border border-gray-200 p-6  ">
-                    <div className="image_holder  flex items-center justify-center bg-red-300">
-<img
-className="w-[100%] h-full object-contain rounded"
-src={item.image}
-alt={item.category}/>  </div>
+                <div key={index} className="  rounded bg-white flex flex-col  justify-center items-center
+                border border-gray-200 p-4 hover:bg-gray-200 hover:cursor-pointer
+                transition-colors duration-1000  ease-in-out  ">
+                    <div className="image_holder  w-[22rem] bg-red-500 flex items-center justify-center">
+                        <img
+                        className="  object-contain rounded"
+                        src={item.image}
+                        alt={item.category}/>  </div>
                     
-                    <h2 className='name__holder flex items-center justify-between py-4'>{item.name} <IsFavourate/></h2>
-                    <a className=" text-lg text-[#4D55CC]"><h4 >{item.category}</h4></a>
-                    <p className=" text-sm text-gray-600 my-2">{item.description}</p>
+                    <h2 className='w-full name__holder flex items-center justify-between py-4  '>{item.name} <IsFavourate/></h2>
+                    <a className="w-full text-lg text-[#4D55CC]"><h4 >{item.category}</h4></a>
+                    <p className="w-full text-sm text-gray-600 my-2">{item.description}</p>
                     <button className="bg-transparent text-black border text-sm
                 border-gray-200 my-2 px-4 py-2 rounded w-[96%] h-[2.4rem] font-bold">View Profile</button>
                 </div>

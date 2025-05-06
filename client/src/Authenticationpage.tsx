@@ -3,17 +3,21 @@ import Login from "./authentication/Login";
 import Signup from "./authentication/Signup";
 import { useState } from "react";
 
+export interface authenticationProps{
+  isAuthenticationActive:true|false;
+  authType: "login" | "register";
+}
 
-const AuthenticationPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState("signup");
+const AuthenticationPage: React.FC<authenticationProps> = ({isAuthenticationActive,authType}) => {
+  const [activeTab, setActiveTab] = useState(authType);
 
-  return ( <div>
+  return ( <div className={`${isAuthenticationActive? "block": "hidden"}`}>
     <div className="flex flex-col p-8">
       <div className="h-[4rem] w-[40%] flex justify-evenly items-center self-center">
         <button
-          onClick={() => setActiveTab("signup")}
+          onClick={() => setActiveTab("register")}
           className={`w-[46%] h-[2.6rem] rounded-lg border font-semibold my-2 py-2 
-            ${activeTab === "signup" ? "bg-[#393E46] text-[#EFEEEA]" : "bg-[#F8F8E1] text-[#273F4F]"}`}
+            ${activeTab === "register" ? "bg-[#393E46] text-[#EFEEEA]" : "bg-[#F8F8E1] text-[#273F4F]"}`}
         >
           Sign Up
         </button>

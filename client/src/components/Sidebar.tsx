@@ -12,7 +12,7 @@ export default function Sidebar() {
 </div>
 
     <div className="nav__links">
-    <a href="/"><LayoutDashboard className="icon" /> <span>Dashboard</span></a>
+    <a href="/Dashboard"><LayoutDashboard className="icon" /> <span>Dashboard</span></a>
     <a href="Transactions"><Receipt className="icon"/><span>Transactions</span></a>
     <a href="Ledgers"> <ScrollText className="icon"/><span>Ledgers</span></a>
     <a href="DayBooks"><Book className="icon"/><span>DayBooks</span></a>
