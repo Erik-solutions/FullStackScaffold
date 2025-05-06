@@ -17,8 +17,8 @@ import MainLayout from "@/layouts/MainLayout";
 import InvoicesPage from "@/pages/finance/InvoicesPage";
 import React, { useState } from 'react';
 import { LandingPage } from "./layouts/LandingPage";
-import ProtectedRoute from "./authentication/ProtectedRoute";
-import { AuthProvider } from "./authentication/AuthContext";
+import ProtectedRoute from "./authenticationOne/ProtectedRoute";
+import { AuthProvider } from "./authenticationOne/AuthContext";
 
 function Router() {
   return (

@@ -1,6 +1,6 @@
 
-import Login from "./authentication/Login";
-import Signup from "./authentication/Signup";
+import Login from "./authenticationOne/Login";
+import Signup from "./authenticationOne/Signup";
 import { useState } from "react";
 
 export interface authenticationProps{
