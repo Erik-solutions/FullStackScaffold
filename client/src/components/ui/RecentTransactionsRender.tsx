@@ -1,4 +1,4 @@
-import { Transaction,TransactionItemRender } from "./RecentTransactions";
+/*import { Transaction,TransactionItemRender } from "./RecentTransactions";
 
 
 const TransactionList: Transaction[] = [
@@ -37,4 +37,4 @@ export default function TransactionNotifications (){
   return (
     <TransactionItemRender TransactionList={TransactionList }/>
   )
-}
+}*/

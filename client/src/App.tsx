@@ -7,7 +7,7 @@ import NotFound from "@/pages/not-found";
 // import Home from "@/pages/Home";
 import Settings from "@/pages/finance/SettingsPage";
 import Transactions from "@/pages/finance/TransactionsPage";
-import Reports from "@/pages/finance/ReportsPage";
+import ReportPage from "@/pages/finance/ReportsPage";
 import Ledgers from "@/pages/finance/LedgersPage";
 import Dashboard  from "@/pages/finance/DashboardPage";
 import DayBooks from "@/pages/finance/DayBooksPage";
@@ -55,7 +55,7 @@ function Router() {
     </Route>
     <Route path="/Reports">
       <ProtectedRoute>
-        <Reports />
+        <ReportPage />
       </ProtectedRoute>
     </Route>
     <Route>🛑 Page not found</Route>
